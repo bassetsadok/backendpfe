@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 // initialze an instance of Sequelize
-const sequelize = new Sequelize('enchere','root','root',{
+const sequelize = new Sequelize(process.env.DATABASE,process.env.USERNAME,process.env.PASSWORD,{
 	host: process.env.DATABASE_HOST || 'localhost',
 	database: process.env.DATABASE,
 	username: process.env.USERNAME,
